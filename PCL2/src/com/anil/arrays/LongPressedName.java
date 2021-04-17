@@ -8,8 +8,6 @@ You examine the typed characters of the keyboard.
 Return True if it is possible that it was your friends name, 
 with some characters (possibly none) being long pressed.
 
- 
-
 Example 1:
 
 Input: name = "alex", typed = "aaleex"
@@ -36,8 +34,17 @@ Constraints:
 1 <= name.length <= 1000
 1 <= typed.length <= 1000
 name and typed contain only lowercase English letters.
-*/
 
+
+Logic:
+
+1. Here, we will use 2 pointers on both the strings and then compare them each character at a time.
+2. if both characters are same then increment both pointers.
+3. if both characters are not equal then check whether the last character of typed string is same as current character of typed string if yes then
+	increment pointer of typed otherwise return false.
+4. at last return true
+
+*/
 
 public class LongPressedName {
 

@@ -5,8 +5,6 @@ package com.anil.arrays;
  Given an integer array nums sorted in non-decreasing order, 
  return an array of the squares of each number sorted in non-decreasing order.
 
- 
-
 Example 1:
 
 Input: nums = [-4,-1,0,3,10]
@@ -28,9 +26,18 @@ nums is sorted in non-decreasing order.
 
 Follow up: Squaring each element and sorting the new array is very trivial, 
 could you find an O(n) solution using a different approach?
+
+Logic 1:
+
+1. take 2 pointers, one from starting and one from end.
+2. compare square of both of them whose square is greater put in result array.
+3. increment  or decrement the pointers whose square was greater.
+4. run the loop till i <= j.
  
  */
 
+
+				
 
 public class SquaresOfASortedArray {
 
@@ -38,12 +45,13 @@ public class SquaresOfASortedArray {
         int n = A.length;
         int[] result = new int[n];
         int i = 0, j = n - 1;
-        for (int p = n - 1; p >= 0; p--) {
+        int p=n-1;
+        while(i<=j) {
             if (Math.abs(A[i]) > Math.abs(A[j])) {
-                result[p] = A[i] * A[i];
+                result[p--] = A[i] * A[i];
                 i++;
             } else {
-                result[p] = A[j] * A[j];
+                result[p--] = A[j] * A[j];
                 j--;
             }
         }

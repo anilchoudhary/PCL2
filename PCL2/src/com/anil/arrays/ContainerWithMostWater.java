@@ -33,6 +33,14 @@ n == height.length
 2 <= n <= 105
 0 <= height[i] <= 104
 
+
+Logic :
+
+1. use two pointers, one from start and one from last.
+2. calculate maximum water possible between 2 lines.
+3. increment the pointer from that side where lines height is smaller.
+4. using above logic just calculate maximum possible water between lines.
+
  */
 
 public class ContainerWithMostWater {
