@@ -26,7 +26,7 @@ n == nums.length
 
 Follow-up: Could you solve the problem in linear time and in O(1) space?
 
-Logic : Boyer - Moore voting algorithm
+Logic : Boyer - Moore voting algorithm : based on distinct number pairing.
 
 1. take i=nums[0] and count = 1 then you need to find the element which is not equal to i
 2. if a element is not equal to i then check count if count > 0 then it means we found a pair in which 2 elements are unique so, count--;
